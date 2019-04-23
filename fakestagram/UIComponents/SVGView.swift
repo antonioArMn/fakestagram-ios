@@ -10,7 +10,11 @@ import UIKit
 import WebKit
 
 class SVGView: UIView {
-    let image: WKWebView = WKWebView()
+    let image: WKWebView = {
+        let wkv = WKWebView()
+        wkv.translatesAutoresizingMaskIntoConstraints = false
+        return wkv
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -22,6 +26,18 @@ class SVGView: UIView {
         setupView()
     }
     
-    func setupView() {
+    private func setupView() {
+        addSubview(image)
+        NSLayoutConstraint.activate([
+            image.topAnchor.constraint(equalTo: self.topAnchor),
+            image.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            image.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            image.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+        ])
+    }
+    
+    public func loadContent(for url: URL) {
+        let req = URLRequest(url: url)
+        image.load(req)
     }
 }
