@@ -29,12 +29,12 @@ class PostCollectionViewCell: UICollectionViewCell {
     private func updateView() {
         guard let post = self.post else { return }
         post.load { [weak self] img in
-            //self?.imageView.image = img
+            self?.imageView.image = img
         }
-        //authorView.author = post.author
-        //titleLbl.text = post.title
-        //likesCountLbl.text = "\(post.likesCount) likes"
-        //commentsCountLbl.text = "\(post.commentsCount) comments"
+        authorView.author = post.author
+        titleLbl.text = post.title
+        likesCountLbl.text = "\(post.likesCount) likes"
+        commentsCountLbl.text = "\(post.commentsCount) comments"
     }
 
 }

@@ -12,6 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostDetailViewController" customModule="fakestagram" customModuleProvider="target">
             <connections>
+                <outlet property="authorView" destination="EJn-kL-eYs" id="D8d-KT-xXe"/>
+                <outlet property="imgView" destination="s23-Bh-4GM" id="jp3-Dr-UqA"/>
+                <outlet property="likeCounterLbl" destination="KFn-If-OfO" id="J2Q-g2-XXi"/>
+                <outlet property="titleLbl" destination="Gqq-yQ-HlR" id="0HL-Xn-HLa"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
