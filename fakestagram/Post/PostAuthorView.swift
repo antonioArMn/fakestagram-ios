@@ -15,13 +15,13 @@ class PostAuthorView: UIView {
         didSet{updateView()}
     }
     
-    let avatarView: SVGView = {
+    private let avatarView: SVGView = {
         let svg  = SVGView()
         svg.translatesAutoresizingMaskIntoConstraints = false
         return svg
     }()
     
-    let nameLbl: UILabel = {
+    private let nameLbl: UILabel = {
         let lbl = UILabel()
         lbl.text = "Lorem Ipsum"
         lbl.translatesAutoresizingMaskIntoConstraints = false
@@ -39,13 +39,14 @@ class PostAuthorView: UIView {
     }
     
     func setupView() {
+        self.backgroundColor = .clear
         //avatarView
         addSubview(avatarView)
         NSLayoutConstraint.activate([
             avatarView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5),
-            avatarView.topAnchor.constraint(equalTo: self.topAnchor, constant: 5),
-            avatarView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -5),
-            avatarView.widthAnchor.constraint(equalToConstant: 52)
+            avatarView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            avatarView.widthAnchor.constraint(equalToConstant: 52),
+            avatarView.heightAnchor.constraint(equalToConstant: 52)
         ])
         avatarView.clipsToBounds = true
         avatarView.layer.cornerRadius = 26
@@ -53,7 +54,7 @@ class PostAuthorView: UIView {
         //nameLbl
         addSubview(nameLbl)
         NSLayoutConstraint.activate([
-            nameLbl.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
+            nameLbl.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             nameLbl.leadingAnchor.constraint(equalTo: avatarView.trailingAnchor, constant: 15),
             nameLbl.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5),
             nameLbl.heightAnchor.constraint(equalToConstant: 32)
@@ -63,6 +64,6 @@ class PostAuthorView: UIView {
     private func updateView() {
         guard let author = self.author else {return}
         nameLbl.text = author.name
-        avatarView.loadContent(for: author.avatarURL())
+        avatarView.loadContent(from: author.avatarUrl())
     }
 }

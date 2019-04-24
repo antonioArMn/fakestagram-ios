@@ -37,6 +37,8 @@
 		E0DDFA2E223E0EF2009EB136 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DDFA2D223E0EF2009EB136 /* TimelineViewController.swift */; };
 		E0DDFA31223E181C009EB136 /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DDFA2F223E181C009EB136 /* PostDetailViewController.swift */; };
 		E0DDFA32223E181C009EB136 /* PostDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0DDFA30223E181C009EB136 /* PostDetailViewController.xib */; };
+		F7F5E3412270BA3400169C82 /* AccountClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F5E3402270BA3400169C82 /* AccountClient.swift */; };
+		F7F5E3432270CB8900169C82 /* TimelineClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F5E3422270CB8900169C82 /* TimelineClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,8 @@
 		E0DDFA2D223E0EF2009EB136 /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		E0DDFA2F223E181C009EB136 /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
 		E0DDFA30223E181C009EB136 /* PostDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostDetailViewController.xib; sourceTree = "<group>"; };
+		F7F5E3402270BA3400169C82 /* AccountClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountClient.swift; sourceTree = "<group>"; };
+		F7F5E3422270CB8900169C82 /* TimelineClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,7 @@
 				E0BB974C223F45EA00D028A1 /* Account.swift */,
 				E04FB2E12249F52900B81C8A /* AccountStorage.swift */,
 				E0BB9756223F6A3500D028A1 /* AccountRepo.swift */,
+				F7F5E3402270BA3400169C82 /* AccountClient.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				E0DDFA2D223E0EF2009EB136 /* TimelineViewController.swift */,
+				F7F5E3422270CB8900169C82 /* TimelineClient.swift */,
 			);
 			path = Timeline;
 			sourceTree = "<group>";
@@ -346,8 +352,10 @@
 				E04FB2E02249F42A00B81C8A /* ItemStorage.swift in Sources */,
 				E0DDFA18223DFCC8009EB136 /* Post.swift in Sources */,
 				E0DDFA2E223E0EF2009EB136 /* TimelineViewController.swift in Sources */,
+				F7F5E3432270CB8900169C82 /* TimelineClient.swift in Sources */,
 				E0BB9755223F5EDA00D028A1 /* Name.swift in Sources */,
 				E0DDF9F1223DF640009EB136 /* AppDelegate.swift in Sources */,
+				F7F5E3412270BA3400169C82 /* AccountClient.swift in Sources */,
 				E0BB9748223F444B00D028A1 /* Client.swift in Sources */,
 				E0DDFA27223E029A009EB136 /* PostAuthorView.swift in Sources */,
 				E0BB9751223F57C400D028A1 /* Date+timestamp.swift in Sources */,
