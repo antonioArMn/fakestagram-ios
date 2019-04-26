@@ -11,7 +11,7 @@ import Foundation
 enum Secrets {
     case host
     case token
-    //Un vil comentario otra vez en vistasXIB
+    //Un vil comentario otra vez en cambiosViernes26
     var value: String? {
         switch self {
         case .host:
