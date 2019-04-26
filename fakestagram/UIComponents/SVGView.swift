@@ -9,10 +9,10 @@
 import UIKit
 import WebKit
 
-class SVGView: UIView {
-    let image: WKWebView = {
-        let config = WKWebViewConfiguration()
-        let wkv = WKWebView(frame: .zero, configuration: config)
+class SVGView: UIView, WKNavigationDelegate {
+    let webSVGView: WKWebView = {
+        let wkv = WKWebView()
+        wkv.scrollView.isScrollEnabled = false
         wkv.translatesAutoresizingMaskIntoConstraints = false
         return wkv
     }()
@@ -28,7 +28,7 @@ class SVGView: UIView {
     }
     
     private func setupView() {
-        backgroundColor = .purple
+        //backgroundColor = .purple
         //addSubview(image)
         //NSLayoutConstraint.activate([
         //    image.topAnchor.constraint(equalTo: self.topAnchor),
@@ -36,10 +36,22 @@ class SVGView: UIView {
         //    image.leadingAnchor.constraint(equalTo: self.leadingAnchor),
         //    image.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         //])
+        webSVGView.navigationDelegate = self
+        addSubview(webSVGView)
+        NSLayoutConstraint.activate([
+            webSVGView.topAnchor.constraint(equalTo: self.topAnchor),
+            webSVGView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            webSVGView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            webSVGView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+        ])
     }
     
-    public func loadContent(from url: URL) {
+    func loadContent(from url: URL) {
         let req = URLRequest(url: url)
-        image.load(req)
+        webSVGView.load(req)
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!){
+        webView.evaluateJavaScript("window.scrollTo(350,0)", completionHandler: nil)
     }
 }

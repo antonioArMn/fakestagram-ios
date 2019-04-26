@@ -37,6 +37,7 @@
 		E0DDFA2E223E0EF2009EB136 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DDFA2D223E0EF2009EB136 /* TimelineViewController.swift */; };
 		E0DDFA31223E181C009EB136 /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DDFA2F223E181C009EB136 /* PostDetailViewController.swift */; };
 		E0DDFA32223E181C009EB136 /* PostDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0DDFA30223E181C009EB136 /* PostDetailViewController.xib */; };
+		F7ABDF702273B018009FC80C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABDF6F2273B018009FC80C /* ProfileViewController.swift */; };
 		F7F5E3412270BA3400169C82 /* AccountClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F5E3402270BA3400169C82 /* AccountClient.swift */; };
 		F7F5E3432270CB8900169C82 /* TimelineClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F5E3422270CB8900169C82 /* TimelineClient.swift */; };
 /* End PBXBuildFile section */
@@ -86,6 +87,7 @@
 		E0DDFA2D223E0EF2009EB136 /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		E0DDFA2F223E181C009EB136 /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
 		E0DDFA30223E181C009EB136 /* PostDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostDetailViewController.xib; sourceTree = "<group>"; };
+		F7ABDF6F2273B018009FC80C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F7F5E3402270BA3400169C82 /* AccountClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountClient.swift; sourceTree = "<group>"; };
 		F7F5E3422270CB8900169C82 /* TimelineClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,6 +171,7 @@
 		E0DDF9EF223DF640009EB136 /* fakestagram */ = {
 			isa = PBXGroup;
 			children = (
+				F7ABDF6E2273AFE9009FC80C /* Profile */,
 				E0BB974B223F45DE00D028A1 /* Account */,
 				E0DDFA16223DFCB6009EB136 /* Post */,
 				E0DDFA2C223E0EDB009EB136 /* Timeline */,
@@ -228,6 +231,14 @@
 				F7F5E3422270CB8900169C82 /* TimelineClient.swift */,
 			);
 			path = Timeline;
+			sourceTree = "<group>";
+		};
+		F7ABDF6E2273AFE9009FC80C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F7ABDF6F2273B018009FC80C /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,6 +357,7 @@
 				E04FB2E22249F52900B81C8A /* AccountStorage.swift in Sources */,
 				E04FB2DC2249F2AB00B81C8A /* CodableStore.swift in Sources */,
 				E0BCD23B22489E2300B4E0F6 /* HttpResponse.swift in Sources */,
+				F7ABDF702273B018009FC80C /* ProfileViewController.swift in Sources */,
 				E0DDFA31223E181C009EB136 /* PostDetailViewController.swift in Sources */,
 				E0BB974D223F45EA00D028A1 /* Account.swift in Sources */,
 				E0BCD23D2248A14300B4E0F6 /* RestClient.swift in Sources */,
