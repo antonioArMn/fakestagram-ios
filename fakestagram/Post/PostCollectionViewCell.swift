@@ -14,6 +14,9 @@ class PostCollectionViewCell: UICollectionViewCell {
         didSet { updateView() }
     }
     
+    private var like = false
+    //private let likeClient = LikeClient(postId: Int)
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var authorView: PostAuthorView!
     @IBOutlet weak var titleLbl: UITextView!
@@ -36,5 +39,24 @@ class PostCollectionViewCell: UICollectionViewCell {
         likesCountLbl.text = "\(post.likesCount) likes"
         commentsCountLbl.text = "\(post.commentsCount) comments"
     }
-
+    @IBAction func tapLike(_ sender: Any) {
+        likeUpdateView()
+        //print("\(post.title) - \(like)")
+    }
+    
+    func likeUpdateView() {
+        guard var post = self.post else { return } //Si no tiene post, no hagas nada (return)
+        like = !like
+        if like {
+            post.likesCount = post.likesCount + 1
+        } else {
+            post.likesCount = post.likesCount - 1
+        }
+        self.post = post
+    }
+    
+    func client() -> LikeClient? {
+        guard let post = self.post , let postId = post.id else { return nil }
+    }
+    
 }

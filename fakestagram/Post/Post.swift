@@ -14,8 +14,8 @@ struct Post: Codable {
     let title: String
     let imageUrl: String?
     let author: Author?
-    let likesCount: Int
-    let commentsCount: Int
+    var likesCount: Int
+    var commentsCount: Int
     let createdAt: String
     
     func load(_ image: @escaping (UIImage) -> Void) {

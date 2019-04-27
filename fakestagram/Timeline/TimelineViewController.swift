@@ -51,4 +51,10 @@ extension TimelineViewController: UICollectionViewDelegate, UICollectionViewData
         cell.post = posts[indexPath.row]
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PostCollectionViewCell.reuseIdentifier, for: indexPath) as! PostCollectionViewCell
+        cell.post = posts[indexPath.row]
+        print(posts[indexPath.row].title)
+    }
 }
