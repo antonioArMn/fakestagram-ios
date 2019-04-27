@@ -17,6 +17,7 @@ struct Post: Codable {
     var likesCount: Int
     var commentsCount: Int
     let createdAt: String
+    var liked: Bool
     
     func load(_ image: @escaping (UIImage) -> Void) {
         guard let urlString = imageUrl, let url = URL(string: urlString) else { return }

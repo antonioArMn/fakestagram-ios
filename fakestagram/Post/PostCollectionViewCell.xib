@@ -98,6 +98,7 @@
                 <outlet property="authorView" destination="Sni-u6-baQ" id="qBt-Tl-RbD"/>
                 <outlet property="commentsCountLbl" destination="00E-Fs-pbe" id="Lis-Qa-HYF"/>
                 <outlet property="imageView" destination="B7R-9H-BNz" id="80f-YJ-9aj"/>
+                <outlet property="likeBtn" destination="2G7-mz-Uik" id="fzn-3F-ma0"/>
                 <outlet property="likesCountLbl" destination="lfa-mc-RD9" id="l03-uX-T8k"/>
                 <outlet property="titleLbl" destination="UCK-8L-B25" id="v1W-29-Lmd"/>
             </connections>
