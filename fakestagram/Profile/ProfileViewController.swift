@@ -14,6 +14,6 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        authorView.author = Author(name: "jojo")
+        authorView.author = Author(id: "213", name: "jojo")
     }
 }
