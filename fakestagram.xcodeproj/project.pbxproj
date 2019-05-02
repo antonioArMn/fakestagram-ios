@@ -37,6 +37,7 @@
 		E0DDFA2E223E0EF2009EB136 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DDFA2D223E0EF2009EB136 /* TimelineViewController.swift */; };
 		E0DDFA31223E181C009EB136 /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DDFA2F223E181C009EB136 /* PostDetailViewController.swift */; };
 		E0DDFA32223E181C009EB136 /* PostDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0DDFA30223E181C009EB136 /* PostDetailViewController.xib */; };
+		F739114F227B50E000034F02 /* ImageCacheStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F739114E227B50E000034F02 /* ImageCacheStorage.swift */; };
 		F7ABDF702273B018009FC80C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABDF6F2273B018009FC80C /* ProfileViewController.swift */; };
 		F7ABDF722273E6D8009FC80C /* LikeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABDF712273E6D8009FC80C /* LikeClient.swift */; };
 		F7F5E3412270BA3400169C82 /* AccountClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F5E3402270BA3400169C82 /* AccountClient.swift */; };
@@ -88,6 +89,7 @@
 		E0DDFA2D223E0EF2009EB136 /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		E0DDFA2F223E181C009EB136 /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
 		E0DDFA30223E181C009EB136 /* PostDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostDetailViewController.xib; sourceTree = "<group>"; };
+		F739114E227B50E000034F02 /* ImageCacheStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheStorage.swift; sourceTree = "<group>"; };
 		F7ABDF6F2273B018009FC80C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F7ABDF712273E6D8009FC80C /* LikeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeClient.swift; sourceTree = "<group>"; };
 		F7F5E3402270BA3400169C82 /* AccountClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountClient.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			children = (
 				E04FB2DA2249F27800B81C8A /* Stores */,
 				E04FB2DF2249F42A00B81C8A /* ItemStorage.swift */,
+				F739114E227B50E000034F02 /* ImageCacheStorage.swift */,
 			);
 			path = Storages;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				E04FB2E22249F52900B81C8A /* AccountStorage.swift in Sources */,
 				E04FB2DC2249F2AB00B81C8A /* CodableStore.swift in Sources */,
 				E0BCD23B22489E2300B4E0F6 /* HttpResponse.swift in Sources */,
+				F739114F227B50E000034F02 /* ImageCacheStorage.swift in Sources */,
 				F7ABDF722273E6D8009FC80C /* LikeClient.swift in Sources */,
 				F7ABDF702273B018009FC80C /* ProfileViewController.swift in Sources */,
 				E0DDFA31223E181C009EB136 /* PostDetailViewController.swift in Sources */,
