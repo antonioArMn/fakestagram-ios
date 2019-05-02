@@ -19,6 +19,14 @@ struct Post: Codable {
     let createdAt: String
     var liked: Bool
     
+    func likesCountText() -> String {
+        return "\(likesCount) likes"
+    }
+    
+    func commentsCountText() -> String {
+        return "\(commentsCount) comments"
+    }
+    
     func load(_ image: @escaping (UIImage) -> Void) {
         let cache = ImageCache(filename: "image-\(self.id!).jpg")
         if let img = cache.load() {

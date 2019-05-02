@@ -37,34 +37,14 @@ class PostCollectionViewCell: UICollectionViewCell {
         }
         authorView.author = post.author
         titleLbl.text = post.title
-        likesCountLbl.text = "\(post.likesCount) likes"
-        commentsCountLbl.text = "\(post.commentsCount) comments"
-        if post.liked {
-            likeBtn.titleLabel?.text = "Unlike"
-        } else {
-            likeBtn.titleLabel?.text = "Like"
-        }
+        likesCountLbl.text = post.likesCountText()
+        commentsCountLbl.text = post.commentsCountText()
     }
     @IBAction func tapLike(_ sender: Any) {
-        likeUpdateView()
-        //print("\(post.title) - \(like)")
+        print("Likeeeeeeeeeeeee!")
+        guard let post = post else { return }
+        let client = LikeUpdaterClient(post: post)
+        let newPost = client.call()
+        likesCountLbl.text = newPost.likesCountText()
     }
-    
-    func likeUpdateView() {
-        guard var post = self.post else { return } //Si no tiene post, no hagas nada (return)
-        post.liked = !post.liked
-        if post.liked {
-            post.likesCount = post.likesCount + 1
-        } else {
-            post.likesCount = post.likesCount - 1
-        }
-        self.post = post
-    }
-    
-    /*
-    func client() -> LikeClient? {
-        guard let post = self.post , let postId = post.id else { return nil }
-    }
-    */
-    
 }
