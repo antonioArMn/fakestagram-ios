@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E04FB2DE2249F2D300B81C8A /* StorageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04FB2DD2249F2D300B81C8A /* StorageType.swift */; };
-		E04FB2E02249F42A00B81C8A /* ItemStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04FB2DF2249F42A00B81C8A /* ItemStorage.swift */; };
-		E04FB2E22249F52900B81C8A /* AccountStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04FB2E12249F52900B81C8A /* AccountStorage.swift */; };
 		E0BB9748223F444B00D028A1 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BB9747223F444B00D028A1 /* Client.swift */; };
 		E0BB974A223F449700D028A1 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BB9749223F449700D028A1 /* Secrets.swift */; };
 		E0BB974D223F45EA00D028A1 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BB974C223F45EA00D028A1 /* Account.swift */; };
@@ -59,8 +57,6 @@
 
 /* Begin PBXFileReference section */
 		E04FB2DD2249F2D300B81C8A /* StorageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageType.swift; sourceTree = "<group>"; };
-		E04FB2DF2249F42A00B81C8A /* ItemStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStorage.swift; sourceTree = "<group>"; };
-		E04FB2E12249F52900B81C8A /* AccountStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStorage.swift; sourceTree = "<group>"; };
 		E0BB9747223F444B00D028A1 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		E0BB9749223F449700D028A1 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		E0BB974C223F45EA00D028A1 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
@@ -123,8 +119,6 @@
 		E04FB2D72249F1E600B81C8A /* Storages */ = {
 			isa = PBXGroup;
 			children = (
-				E04FB2DA2249F27800B81C8A /* Stores */,
-				E04FB2DF2249F42A00B81C8A /* ItemStorage.swift */,
 				F739114E227B50E000034F02 /* ImageCacheStorage.swift */,
 				F7391150227B59B000034F02 /* CodableStorage.swift */,
 				F7391152227B5B7800034F02 /* DataContainer.swift */,
@@ -133,13 +127,6 @@
 				E04FB2DD2249F2D300B81C8A /* StorageType.swift */,
 			);
 			path = Storages;
-			sourceTree = "<group>";
-		};
-		E04FB2DA2249F27800B81C8A /* Stores */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Stores;
 			sourceTree = "<group>";
 		};
 		E0BB9746223F441400D028A1 /* Network */ = {
@@ -157,7 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				E0BB974C223F45EA00D028A1 /* Account.swift */,
-				E04FB2E12249F52900B81C8A /* AccountStorage.swift */,
 				E0BB9756223F6A3500D028A1 /* AccountRepo.swift */,
 				F7F5E3402270BA3400169C82 /* AccountClient.swift */,
 			);
@@ -371,7 +357,6 @@
 				E04FB2DE2249F2D300B81C8A /* StorageType.swift in Sources */,
 				E0DDFA25223E0017009EB136 /* SVGView.swift in Sources */,
 				F7391151227B59B000034F02 /* CodableStorage.swift in Sources */,
-				E04FB2E22249F52900B81C8A /* AccountStorage.swift in Sources */,
 				E0BCD23B22489E2300B4E0F6 /* HttpResponse.swift in Sources */,
 				F7391153227B5B7800034F02 /* DataContainer.swift in Sources */,
 				F739114F227B50E000034F02 /* ImageCacheStorage.swift in Sources */,
@@ -380,7 +365,6 @@
 				E0DDFA31223E181C009EB136 /* PostDetailViewController.swift in Sources */,
 				E0BB974D223F45EA00D028A1 /* Account.swift in Sources */,
 				E0BCD23D2248A14300B4E0F6 /* RestClient.swift in Sources */,
-				E04FB2E02249F42A00B81C8A /* ItemStorage.swift in Sources */,
 				E0DDFA18223DFCC8009EB136 /* Post.swift in Sources */,
 				E0DDFA2E223E0EF2009EB136 /* TimelineViewController.swift in Sources */,
 				F7F5E3432270CB8900169C82 /* TimelineClient.swift in Sources */,
