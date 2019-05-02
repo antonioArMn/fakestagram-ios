@@ -9,14 +9,13 @@
 import Foundation
 import UIKit
 
-class ImageStorage {
+class ImageCacheStorage {
+    static let shared = ImageCacheStorage()
     private let cache = NSCache<NSString, UIImage>()
     private let storageType = StorageType.cache
     
-    func imageURL(forKey key: String) -> URL {
-        let documentsDirectories = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        let documentDirectory = documentsDirectories.first!
-        return documentDirectory.appendingPathComponent(key)
+    init() {
+        storageType.ensureExists()
     }
     
     func setImage(_ image: UIImage, forKey key: String) {
@@ -27,7 +26,7 @@ class ImageStorage {
         }
     }
     
-    func image(forKey key: String) -> UIImage? {
+    func getImage(forKey key: String) -> UIImage? {
         if let existingImage = cache.object(forKey: key as NSString) {
             return existingImage
         }
@@ -50,5 +49,11 @@ class ImageStorage {
         } catch let deleteError {
             print("Error removing the image from disk: \(deleteError)")
         }
+    }
+    
+    private func imageURL(forKey key: String) -> URL {
+        var directory = storageType.url
+        directory.appendPathComponent(key)
+        return directory
     }
 }

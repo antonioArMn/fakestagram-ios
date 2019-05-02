@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E04FB2DC2249F2AB00B81C8A /* CodableStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04FB2DB2249F2AB00B81C8A /* CodableStore.swift */; };
 		E04FB2DE2249F2D300B81C8A /* StorageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04FB2DD2249F2D300B81C8A /* StorageType.swift */; };
 		E04FB2E02249F42A00B81C8A /* ItemStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04FB2DF2249F42A00B81C8A /* ItemStorage.swift */; };
 		E04FB2E22249F52900B81C8A /* AccountStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04FB2E12249F52900B81C8A /* AccountStorage.swift */; };
@@ -38,6 +37,10 @@
 		E0DDFA31223E181C009EB136 /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DDFA2F223E181C009EB136 /* PostDetailViewController.swift */; };
 		E0DDFA32223E181C009EB136 /* PostDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0DDFA30223E181C009EB136 /* PostDetailViewController.xib */; };
 		F739114F227B50E000034F02 /* ImageCacheStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F739114E227B50E000034F02 /* ImageCacheStorage.swift */; };
+		F7391151227B59B000034F02 /* CodableStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7391150227B59B000034F02 /* CodableStorage.swift */; };
+		F7391153227B5B7800034F02 /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7391152227B5B7800034F02 /* DataContainer.swift */; };
+		F7391155227B5DDB00034F02 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7391154227B5DDB00034F02 /* ImageCache.swift */; };
+		F7391157227B648600034F02 /* ImageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7391156227B648600034F02 /* ImageStorage.swift */; };
 		F7ABDF702273B018009FC80C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABDF6F2273B018009FC80C /* ProfileViewController.swift */; };
 		F7ABDF722273E6D8009FC80C /* LikeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABDF712273E6D8009FC80C /* LikeClient.swift */; };
 		F7F5E3412270BA3400169C82 /* AccountClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F5E3402270BA3400169C82 /* AccountClient.swift */; };
@@ -55,7 +58,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E04FB2DB2249F2AB00B81C8A /* CodableStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableStore.swift; sourceTree = "<group>"; };
 		E04FB2DD2249F2D300B81C8A /* StorageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageType.swift; sourceTree = "<group>"; };
 		E04FB2DF2249F42A00B81C8A /* ItemStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStorage.swift; sourceTree = "<group>"; };
 		E04FB2E12249F52900B81C8A /* AccountStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStorage.swift; sourceTree = "<group>"; };
@@ -90,6 +92,10 @@
 		E0DDFA2F223E181C009EB136 /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
 		E0DDFA30223E181C009EB136 /* PostDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostDetailViewController.xib; sourceTree = "<group>"; };
 		F739114E227B50E000034F02 /* ImageCacheStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheStorage.swift; sourceTree = "<group>"; };
+		F7391150227B59B000034F02 /* CodableStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableStorage.swift; sourceTree = "<group>"; };
+		F7391152227B5B7800034F02 /* DataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
+		F7391154227B5DDB00034F02 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		F7391156227B648600034F02 /* ImageStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStorage.swift; sourceTree = "<group>"; };
 		F7ABDF6F2273B018009FC80C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F7ABDF712273E6D8009FC80C /* LikeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeClient.swift; sourceTree = "<group>"; };
 		F7F5E3402270BA3400169C82 /* AccountClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountClient.swift; sourceTree = "<group>"; };
@@ -120,6 +126,11 @@
 				E04FB2DA2249F27800B81C8A /* Stores */,
 				E04FB2DF2249F42A00B81C8A /* ItemStorage.swift */,
 				F739114E227B50E000034F02 /* ImageCacheStorage.swift */,
+				F7391150227B59B000034F02 /* CodableStorage.swift */,
+				F7391152227B5B7800034F02 /* DataContainer.swift */,
+				F7391154227B5DDB00034F02 /* ImageCache.swift */,
+				F7391156227B648600034F02 /* ImageStorage.swift */,
+				E04FB2DD2249F2D300B81C8A /* StorageType.swift */,
 			);
 			path = Storages;
 			sourceTree = "<group>";
@@ -127,8 +138,6 @@
 		E04FB2DA2249F27800B81C8A /* Stores */ = {
 			isa = PBXGroup;
 			children = (
-				E04FB2DB2249F2AB00B81C8A /* CodableStore.swift */,
-				E04FB2DD2249F2D300B81C8A /* StorageType.swift */,
 			);
 			path = Stores;
 			sourceTree = "<group>";
@@ -358,11 +367,13 @@
 				E0BB974F223F552B00D028A1 /* UIDevice+Info.swift in Sources */,
 				E0BCD23922489DFB00B4E0F6 /* Status.swift in Sources */,
 				E0DDFA21223DFE73009EB136 /* PostCollectionViewCell.swift in Sources */,
+				F7391157227B648600034F02 /* ImageStorage.swift in Sources */,
 				E04FB2DE2249F2D300B81C8A /* StorageType.swift in Sources */,
 				E0DDFA25223E0017009EB136 /* SVGView.swift in Sources */,
+				F7391151227B59B000034F02 /* CodableStorage.swift in Sources */,
 				E04FB2E22249F52900B81C8A /* AccountStorage.swift in Sources */,
-				E04FB2DC2249F2AB00B81C8A /* CodableStore.swift in Sources */,
 				E0BCD23B22489E2300B4E0F6 /* HttpResponse.swift in Sources */,
+				F7391153227B5B7800034F02 /* DataContainer.swift in Sources */,
 				F739114F227B50E000034F02 /* ImageCacheStorage.swift in Sources */,
 				F7ABDF722273E6D8009FC80C /* LikeClient.swift in Sources */,
 				F7ABDF702273B018009FC80C /* ProfileViewController.swift in Sources */,
@@ -375,6 +386,7 @@
 				F7F5E3432270CB8900169C82 /* TimelineClient.swift in Sources */,
 				E0BB9755223F5EDA00D028A1 /* Name.swift in Sources */,
 				E0DDF9F1223DF640009EB136 /* AppDelegate.swift in Sources */,
+				F7391155227B5DDB00034F02 /* ImageCache.swift in Sources */,
 				F7F5E3412270BA3400169C82 /* AccountClient.swift in Sources */,
 				E0BB9748223F444B00D028A1 /* Client.swift in Sources */,
 				E0DDFA27223E029A009EB136 /* PostAuthorView.swift in Sources */,
