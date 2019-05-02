@@ -61,8 +61,10 @@ class PostCollectionViewCell: UICollectionViewCell {
         self.post = post
     }
     
+    /*
     func client() -> LikeClient? {
         guard let post = self.post , let postId = post.id else { return nil }
     }
+    */
     
 }
