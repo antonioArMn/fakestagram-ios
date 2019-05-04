@@ -44,6 +44,7 @@
 		F739115A227B85F400034F02 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7391159227B85F400034F02 /* CameraViewController.swift */; };
 		F739115C227B881D00034F02 /* CreatePostClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F739115B227B881D00034F02 /* CreatePostClient.swift */; };
 		F739115E227B8DA200034F02 /* UIImage+base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = F739115D227B8DA200034F02 /* UIImage+base64.swift */; };
+		F7391160227B915F00034F02 /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = F739115F227B915F00034F02 /* Like.swift */; };
 		F7ABDF702273B018009FC80C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABDF6F2273B018009FC80C /* ProfileViewController.swift */; };
 		F7ABDF722273E6D8009FC80C /* LikeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABDF712273E6D8009FC80C /* LikeClient.swift */; };
 		F7F5E3412270BA3400169C82 /* AccountClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F5E3402270BA3400169C82 /* AccountClient.swift */; };
@@ -106,6 +107,7 @@
 		F7391159227B85F400034F02 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		F739115B227B881D00034F02 /* CreatePostClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostClient.swift; sourceTree = "<group>"; };
 		F739115D227B8DA200034F02 /* UIImage+base64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+base64.swift"; sourceTree = "<group>"; };
+		F739115F227B915F00034F02 /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
 		F7ABDF6F2273B018009FC80C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F7ABDF712273E6D8009FC80C /* LikeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeClient.swift; sourceTree = "<group>"; };
 		F7F5E3402270BA3400169C82 /* AccountClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountClient.swift; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 				E0DDFA30223E181C009EB136 /* PostDetailViewController.xib */,
 				F7ABDF712273E6D8009FC80C /* LikeClient.swift */,
 				F739115B227B881D00034F02 /* CreatePostClient.swift */,
+				F739115F227B915F00034F02 /* Like.swift */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 				E0BB9748223F444B00D028A1 /* Client.swift in Sources */,
 				E0DDFA27223E029A009EB136 /* PostAuthorView.swift in Sources */,
 				E0BB9751223F57C400D028A1 /* Date+timestamp.swift in Sources */,
+				F7391160227B915F00034F02 /* Like.swift in Sources */,
 				E0BB974A223F449700D028A1 /* Secrets.swift in Sources */,
 				E0BB9757223F6A3500D028A1 /* AccountRepo.swift in Sources */,
 			);
