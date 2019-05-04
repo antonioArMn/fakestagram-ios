@@ -42,7 +42,7 @@
         <!--Profile Name-->
         <scene sceneID="F5e-x0-Usw">
             <objects>
-                <viewController id="ZXG-Uf-fgx" sceneMemberID="viewController">
+                <viewController id="ZXG-Uf-fgx" customClass="ProfileViewController" customModule="fakestagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Olc-Pp-Vyl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,6 +88,9 @@
                         <viewLayoutGuide key="safeArea" id="hc8-6h-JFA"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profile Name" id="g7K-02-Y1a"/>
+                    <connections>
+                        <outlet property="authorView" destination="5q0-Ap-zuW" id="DOy-Je-pl3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3oI-Up-tFT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

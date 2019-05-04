@@ -18,6 +18,7 @@ class CameraViewController: UIViewController {
     }
     
     @IBAction func onTapSnap(_ sender: UIButton) {
+        print("POOOOST")
         guard let img = UIImage(named: "diosMexica"), let imgBase64 = img.encodedBase64() else { return }
         let payload = CreatePostBase64(title: "diosMexica - \(Date().currentTimestamp())", imageData: imgBase64)
         client.create(payload: payload) { post in
