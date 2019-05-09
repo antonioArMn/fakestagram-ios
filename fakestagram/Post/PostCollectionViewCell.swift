@@ -10,6 +10,7 @@ import UIKit
 
 class PostCollectionViewCell: UICollectionViewCell {
     static let reuseIdentifier  = "postViewCell"
+    public var row: Int = -1
     public var post: Post? {
         didSet { updateView() }
     }
@@ -41,10 +42,9 @@ class PostCollectionViewCell: UICollectionViewCell {
         commentsCountLbl.text = post.commentsCountText()
     }
     @IBAction func tapLike(_ sender: Any) {
-        print("Likeeeeeeeeeeeee!")
+        //print("Likeeeeeeeeeeeee!")
         guard let post = post else { return }
-        let client = LikeUpdaterClient(post: post)
-        let newPost = client.call()
-        likesCountLbl.text = newPost.likesCountText()
+        let client = LikeUpdaterClient(post: post, row: row)
+        self.post = client.call()
     }
 }

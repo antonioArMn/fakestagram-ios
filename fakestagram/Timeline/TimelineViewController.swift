@@ -17,8 +17,9 @@ class TimelineViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Token value: \(Secrets.token.value!)")
+        //print("Token value: \(Secrets.token.value!)")
         configCollectionView()
+        NotificationCenter.default.addObserver(self, selector: #selector(didLikePost(_:)), name: .didLikePost, object: nil)
         client.show { [weak self] data in
             self?.posts = data
         }
@@ -29,6 +30,15 @@ class TimelineViewController: UIViewController {
         postsCollectionView.dataSource = self
         let postCollectionViewCellXib = UINib(nibName: String(describing: PostCollectionViewCell.self), bundle: nil)
         postsCollectionView.register(postCollectionViewCellXib, forCellWithReuseIdentifier: PostCollectionViewCell.reuseIdentifier)
+    }
+    
+    @objc func didLikePost(_ notification: NSNotification) {
+        guard let userInfo = notification.userInfo,
+            let row = userInfo["row"] as? Int,
+            let data = userInfo["post"] as? Data,
+            let json = try? JSONDecoder().decode(Post.self, from: data) else { return }
+        //Error, like en publicaciones propias
+        //posts[row] = json
     }
 }
 
@@ -50,11 +60,5 @@ extension TimelineViewController: UICollectionViewDelegate, UICollectionViewData
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PostCollectionViewCell.reuseIdentifier, for: indexPath) as! PostCollectionViewCell
         cell.post = posts[indexPath.row]
         return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PostCollectionViewCell.reuseIdentifier, for: indexPath) as! PostCollectionViewCell
-        cell.post = posts[indexPath.row]
-        print(posts[indexPath.row].title)
     }
 }

@@ -12,9 +12,11 @@ class LikeUpdaterClient {
     private let client = Client()
     private let basePath = "/api/posts"
     private let post: Post
+    private let row: Int
     
-    init(post: Post) {
+    init(post: Post, row: Int) {
         self.post = post
+        self.row = row
     }
     
     func call() -> Post {
@@ -26,31 +28,49 @@ class LikeUpdaterClient {
     }
     
     func like() -> Post {
-        var post = self.post
         guard let postId = post.id else { return post }
-        client.request("POST", path: "\(basePath)/\(postId)/like", body: nil, completionHandler: onSuccess(response:data:), errorHandler: onError(error:))
-        post.likesCount += 1
-        post.liked = true
-        return post
+        client.request("POST", path: "\(basePath)/\(postId)/like", body: nil, completionHandler: onSuccessLike(response:data:), errorHandler: onError(error:))
+        //post1 por corregir error
+        var post1 = self.post
+        post1.likesCount += 1
+        post1.liked = true
+        return post1
     }
     
     func dislike() -> Post {
-        var post = self.post
         guard let postId = post.id else { return post }
-        client.request("DELETE", path: "\(basePath)/\(postId)/like", body: nil, completionHandler: onSuccess(response:data:), errorHandler: onError(error:))
-        post.likesCount -= 1
-        post.liked = false
-        return post
+        client.request("DELETE", path: "\(basePath)/\(postId)/like", body: nil, completionHandler: onSuccessDislike(response:data:), errorHandler: onError(error:))
+        //post2 por corregir error
+        var post2 = self.post
+        post2.likesCount -= 1
+        post2.liked = false
+        return post2
     }
     
-    func onSuccess(response: HTTPResponse, data: Data?) {
+    func onSuccessLike(response: HTTPResponse, data: Data?) {
         guard response.successful() else { return }
-        //TODO : add observer here
-        print("Yehi!")
+        var post = self.post
+        post.likesCount += 1
+        post.liked = true
+        sendNotification(for: post)
+    }
+    
+    func onSuccessDislike(response: HTTPResponse, data: Data?) {
+        guard response.successful() else { return }
+        var post = self.post
+        post.likesCount -= 1
+        post.liked = false
+        sendNotification(for: post)
     }
     
     private func onError(error: Error?) {
         guard let err = error else { return }
         print("Error on request: \(err.localizedDescription)")
+    }
+    
+    func sendNotification(for updatedPost: Post) {
+        guard let data = try? JSONEncoder().encode(updatedPost) else { return }
+        NotificationCenter.default.post(name: .didLikePost, object: nil, userInfo: ["post": data as Any, "row": row as Any] )
+        
     }
 }
