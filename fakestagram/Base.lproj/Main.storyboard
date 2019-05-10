@@ -90,6 +90,7 @@
                     <navigationItem key="navigationItem" title="Profile Name" id="g7K-02-Y1a"/>
                     <connections>
                         <outlet property="authorView" destination="5q0-Ap-zuW" id="DOy-Je-pl3"/>
+                        <outlet property="previewPostsCollectionView" destination="iR7-wM-iiK" id="tdW-3Q-vM2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3oI-Up-tFT" userLabel="First Responder" sceneMemberID="firstResponder"/>
