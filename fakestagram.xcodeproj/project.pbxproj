@@ -37,6 +37,8 @@
 		E0DDFA31223E181C009EB136 /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DDFA2F223E181C009EB136 /* PostDetailViewController.swift */; };
 		E0DDFA32223E181C009EB136 /* PostDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0DDFA30223E181C009EB136 /* PostDetailViewController.xib */; };
 		F73722562284935B0049C975 /* NotificationNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73722552284935B0049C975 /* NotificationNames.swift */; };
+		F737225B2285E5B00049C975 /* PostThumbnailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73722592285E5B00049C975 /* PostThumbnailCollectionViewCell.swift */; };
+		F737225C2285E5B00049C975 /* PostThumbnailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F737225A2285E5B00049C975 /* PostThumbnailCollectionViewCell.xib */; };
 		F739114F227B50E000034F02 /* ImageCacheStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F739114E227B50E000034F02 /* ImageCacheStorage.swift */; };
 		F7391151227B59B000034F02 /* CodableStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7391150227B59B000034F02 /* CodableStorage.swift */; };
 		F7391153227B5B7800034F02 /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7391152227B5B7800034F02 /* DataContainer.swift */; };
@@ -101,6 +103,8 @@
 		E0DDFA2F223E181C009EB136 /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
 		E0DDFA30223E181C009EB136 /* PostDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostDetailViewController.xib; sourceTree = "<group>"; };
 		F73722552284935B0049C975 /* NotificationNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNames.swift; sourceTree = "<group>"; };
+		F73722592285E5B00049C975 /* PostThumbnailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostThumbnailCollectionViewCell.swift; sourceTree = "<group>"; };
+		F737225A2285E5B00049C975 /* PostThumbnailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostThumbnailCollectionViewCell.xib; sourceTree = "<group>"; };
 		F739114E227B50E000034F02 /* ImageCacheStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheStorage.swift; sourceTree = "<group>"; };
 		F7391150227B59B000034F02 /* CodableStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableStorage.swift; sourceTree = "<group>"; };
 		F7391152227B5B7800034F02 /* DataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
@@ -293,6 +297,8 @@
 			isa = PBXGroup;
 			children = (
 				F7ABDF6F2273B018009FC80C /* ProfileViewController.swift */,
+				F73722592285E5B00049C975 /* PostThumbnailCollectionViewCell.swift */,
+				F737225A2285E5B00049C975 /* PostThumbnailCollectionViewCell.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -384,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0DDFA22223DFE73009EB136 /* PostCollectionViewCell.xib in Resources */,
+				F737225C2285E5B00049C975 /* PostThumbnailCollectionViewCell.xib in Resources */,
 				E0BB9753223F5DFB00D028A1 /* Names.plist in Resources */,
 				E0DDF9FB223DF642009EB136 /* LaunchScreen.storyboard in Resources */,
 				E0DDFA32223E181C009EB136 /* PostDetailViewController.xib in Resources */,
@@ -492,6 +499,7 @@
 				F7ABDF722273E6D8009FC80C /* LikeClient.swift in Sources */,
 				F73722562284935B0049C975 /* NotificationNames.swift in Sources */,
 				F739115C227B881D00034F02 /* CreatePostClient.swift in Sources */,
+				F737225B2285E5B00049C975 /* PostThumbnailCollectionViewCell.swift in Sources */,
 				F7ABDF702273B018009FC80C /* ProfileViewController.swift in Sources */,
 				E0DDFA31223E181C009EB136 /* PostDetailViewController.swift in Sources */,
 				E0BB974D223F45EA00D028A1 /* Account.swift in Sources */,
