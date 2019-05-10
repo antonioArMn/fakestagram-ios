@@ -20,13 +20,16 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zz6-dh-6dJ">
-                        <rect key="frame" x="-20" y="36" width="240" height="128"/>
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="196" height="179"/>
+            <connections>
+                <outlet property="imageView" destination="Zz6-dh-6dJ" id="Qaa-p6-T4L"/>
+            </connections>
             <point key="canvasLocation" x="254.40000000000001" y="180.35982008995504"/>
         </collectionViewCell>
     </objects>
