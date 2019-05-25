@@ -39,6 +39,13 @@
                                 <rect key="frame" x="16" y="146" width="343" height="236"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ral-oO-zWt">
+                                <rect key="frame" x="16" y="390" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -52,6 +59,7 @@
                         <outlet property="imageView" destination="RJA-iQ-g4X" id="hmA-Cb-LUQ"/>
                         <outlet property="postButton" destination="OH5-H7-tOc" id="FvL-cb-0bq"/>
                         <outlet property="selectImageButton" destination="Mvn-JC-TRt" id="4fb-NY-b3p"/>
+                        <outlet property="textField" destination="Ral-oO-zWt" id="fy9-NW-baZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PfC-sh-ILb" userLabel="First Responder" sceneMemberID="firstResponder"/>

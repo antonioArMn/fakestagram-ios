@@ -14,6 +14,8 @@ class CameraViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var selectImageButton: UIButton!
     @IBOutlet weak var postButton: UIButton!
+    @IBOutlet weak var textField: UITextField!
+    
     
     //Properties
     var imagePicker: ImagePicker!
@@ -35,6 +37,12 @@ class CameraViewController: UIViewController {
         imageView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
         imageView.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: 0.40).isActive = true
         
+        //textView.backgroundColor = .red
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 8).isActive = true
+        textField.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor).isActive = true
+        textField.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor).isActive = true
+        //textField.heightAnchor.constraint(equalToConstant: 60).isActive = true
         
         selectImageButton.translatesAutoresizingMaskIntoConstraints = false
         selectImageButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
@@ -52,7 +60,7 @@ class CameraViewController: UIViewController {
         print("POOOOST")
         //guard let img = UIImage(named: "leopardoNieve"), let imgBase64 = img.encodedBase64() else { return }
         //let payload = CreatePostBase64(title: "Leopardo nieve - \(Date().currentTimestamp())", imageData: imgBase64)
-        let payload = CreatePostBase64(title: "From Photo Library", imageData: self.imageSelected64)
+        let payload = CreatePostBase64(title: "\(textField.text!)", imageData: self.imageSelected64)
         client.create(payload: payload) { post in
             print(post)
         }
