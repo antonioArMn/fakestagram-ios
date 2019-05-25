@@ -11,7 +11,7 @@ import Foundation
 enum Secrets {
     case host
     case token
-    //Un comentario otra vez en cameraAccess
+    //Un comentario otra vez en imageDescription
     var value: String? {
         switch self {
         case .host:
